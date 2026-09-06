@@ -1,0 +1,21 @@
+flowchart TD
+    INICIO(["Inicio"])
+    LEER@{ shape: manual-input, label: "Ingresar n" }
+    INIT["i ← 0"]
+    COND{"i <= n - 1?"}
+    LLENAR["A[i] ← aleatorio(1, 30)"]
+    INCR["i ← i + 1"]
+    MOSTRAR_ARR@{ shape: curv-trap, label: "Mostrar el array A" }
+    F_MEDIA[["Media(A, n)"]]
+    F_MODA[["Moda(A, n)"]]
+    F_MEDIANA[["Mediana(A, n)"]]
+    MOSTRAR@{ shape: curv-trap, label: "Mostrar media, moda y mediana" }
+    LIBERAR["Liberar A"]
+    FIN(["Fin"])
+
+    INICIO --> LEER --> INIT --> COND
+    COND -->|Sí| LLENAR
+    LLENAR --> INCR
+    INCR --> COND
+    COND -->|No| MOSTRAR_ARR
+    MOSTRAR_ARR --> F_MEDIA --> F_MODA --> F_MEDIANA --> MOSTRAR --> LIBERAR --> FIN
