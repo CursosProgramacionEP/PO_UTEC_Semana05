@@ -1,0 +1,34 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- CLion / JetBrains ---
+.idea/
+*.iml
+cmake-build-*/
+
+# --- CMake ---
+build/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# --- Compilados C++ ---
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dSYM/
+a.out
+
+# --- Editores ---
+.vscode/
+*.swp
+*~
