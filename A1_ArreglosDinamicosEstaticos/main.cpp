@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-void imprimirArreglo(int[],int);
+
 
 int main() {
     //Creacion de arreglos estaticos, se crea en el stack y no se puede cambiar su tamaño
@@ -27,13 +27,10 @@ int main() {
     }
 
     // Imprimir el arreglo
-    imprimirArreglo(edades, 5);
+    for(int i=0; i<5; i++) {
+        cout<<"Numero aleatorio "<<i+1<<": "<<edades[i]<<endl;
+    }
 
     return 0;
 }
 
-void imprimirArreglo(int edades[], int n) {
-    for(int i=0; i<n; i++) {
-        cout<<edades[i]<<endl;
-    }
-}
